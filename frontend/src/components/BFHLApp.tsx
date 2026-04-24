@@ -26,11 +26,11 @@ export default function BFHLApp() {
 
     setLoading(true);
     try {
-      const res = await fetch('https://bfhlchallenge-1.onrender.com', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: items }),
-      });
+      const res = await fetch('https://bfhlchallenge-1.onrender.com/bfhl', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ data: items }),
+});
 
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
